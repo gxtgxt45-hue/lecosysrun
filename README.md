@@ -2,6 +2,20 @@
 
 An exploratory OpenDSS LV analysis application for the Kandana Church transformer. The interface provides a geographic pole network, phase voltage and unbalance coloring, inferred feeder filters, solar connection markers, selectable meter timestamps and playback, four phase scenarios and comparison, pole inspection, and CSV/OpenDSS exports. The map uses the supplied geographic coordinates without sending customer data to a map provider; street imagery is not included.
 
+## Run on your computer (downloaded ZIP)
+
+Opening static/index.html directly only displays the layout: OpenDSS runs in the Python server and the UI requires its API.
+
+1. Install **Python 3.12, 64-bit**. On Windows, enable **Add Python to PATH** in the installer.
+2. Extract the GitHub ZIP completely.
+3. Inside the extracted project folder, create a folder named `data`. Copy the four original files into it, preserving their names (listed below). The GitHub ZIP deliberately does not contain customer data.
+4. On Windows, double-click **start_windows.bat**. On macOS/Linux, open a terminal in the project folder and run `bash start_local.sh`.
+5. The launcher installs dependencies, starts the Python/OpenDSS server and opens your browser when data is ready. Keep its terminal window open. The first launch needs Internet access. Press Ctrl+C to stop.
+
+If a required file is missing, the launcher prints the exact folder and missing filenames. If the browser does not open automatically, use the address printed after READY. Do not open index.html directly. The launcher binds to your computer only; it is not a public deployment.
+
+The Python launcher has been tested on Linux. The Windows batch wrapper is provided but has not been executed on Windows in this cloud environment.
+
 ## Run
 
 Use the existing checkout; each cloud task is already isolated. Do not create a worktree unless explicitly requested.
